@@ -1,0 +1,53 @@
+Para criar um banco de dados, acessa-se o Command Line Client, usa-se o comando "create databese" e 
+o nome que receberá aquele banco.
+
+Exemplo:
+
+Entrar no CDM My SQL Command Line Client
+Colocar senha
+Escrever o comando:
+	create database projeto; 
+(O banco de dados receberá o nome "projeto")
+Obs: Não esquecer o ponto e vírgula, visto que, ele é um delimitador para dizer que o comando acabou.
+
+CONECTANDO-SE AO BANCO DE DADOS:
+É necessário se conectar ao banco de dados para que ele crie, use e execute a tabela que foi criada e
+caso queira mudar de banco de dados, visto que, pode haver diversos bancos de dados em uma empresa. 
+Usa-se o comando "USE" e em seguida coloca-se o nome do banco de dados
+	use projeto;
+
+CRIANDO UMA TABELA:
+Usa-se o comando "create table" e dentro dessa tabela, haverá os campos(atributos), ou seja, os dados
+que serão armazenados. 
+Para isso, usa-se os parenteses e dentro deles será colocado os campos.
+	create table cliente(
+	  nome varchar(30),
+	  sexo char(1),
+	  email varchar(30),
+	  cpf int(11),
+	  telefone varchar(30),
+	  endereço varchar(100)
+	)
+O varchar significa que é uma string que receberá no máximo até 30 caracteres.
+-Qual a diferença do char e do varchar?
+	Ajuda o algoritmo a trabalhar com mais precisão, deixando o banco de dados mais rápido na 
+busca de determinado dado, quando for consultado, isso chama-se TUNNIG, onde você tuna o banco de 
+dados para que ele fique mais rápido
+
+Não esquecer a vírgula e o ultimo campo não recebe virgula
+
+-Como fazer para verificar as tabelas dentro do banco de dados?
+Usa-se o comando "SHOW TABLES"
+
+- Como identificar/consultar quais os campos de uma tabela dentro de um banco de dados e como 
+é essa tabela(estrutura/descrição)?
+Usa-se o comando "DESC" e o nome da tabela que deseja consultar
+	desc clientes;
+
+RECAPITULANDO:
+CREATE DATABASE -> Cria o banco
+USE -> Conecta-se ao banco e sempre é utilizado após fechar o SGBD(Sistema de gerenciamento de banco
+de dados) e abrir de novo(acesso aos bancos)
+CREATE TABLE -> Cria uma tabela
+SHOW TABLES -> Mostra as tabelas
+DESC-> Consulta a tabela e mostra seus campos
