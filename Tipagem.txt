@@ -1,0 +1,35 @@
+Tipagem de tabela de banco de dados
+
+Char e varchar
+- São caracteres do tipo string
+A diferença entre o char e o varchar é que o char não varia, então se você determinou que um campo
+terá 10 bytes e esse campo não for todo preenchido,ou seja, ocupar somente 4 bytes, ele continuará 
+com um valor de 10 bytes na memoria. Já o varchar muda de tamanho, então se for colocado um valor
+menor, ele ocupará somente aquele valor preenchido ocupando menos memória.
+Com isso, ajuda muito na performance do banco de dados, visto que, ele fica mais leve pois os scripts
+consumirão menos memória.
+Usamos o char quando os número de caracteres da coluna nunca for variante(nunca muda), como por exemplo,
+se for armazenar uma sigla de uma unidade federativa, sempre serão 2 letras, nunca muda. 
+OBS: Em números que não utilizam cálculos usamos o VARCHAR, como em CPF, CNPJ, assim é possível
+cadastrar com barras, traços, etc
+
+Int e Float
+- São usados para valores númericos
+O maior números de algarismos do tipo int, é de 11 digitos
+
+Blob
+- É usados para objetos como fotos e documentos
+
+Text
+- É usado para textos extensos 
+
+Enum
+É um conjunto fixo de dados enumerados, e utilizamos para fixar valores em uma coluna.
+A organização dos dados, leva erro de contagem, por isso, é importante delimitar um conteúdo.
+Como por exemplo, em um sistema que armazena o sexo da pessoa, ela pode digitar de diversas maneiras,
+como com letra maiusculas, só a letra inicial, entre outros, assim haveria varios tipos de informação,
+causando diversos confitos. O enum acaba com esse problema, pois ele funciona como uma combobox,
+no qual, o usuário escolhe as opções disponiveis (conjunto delimitado de valores) e não tem a opção 
+de digitar, evitando conflito de dados.
+O enum está presente apenas no MySQL, em outros tipos de banco como o Oracle, SQLServer, é necessário
+criar uma constraint de check
