@@ -24,7 +24,8 @@ Para isso, usa-se os parenteses e dentro deles será colocado os campos.
 	  nome varchar(30),
 	  sexo char(1),
 	  email varchar(30),
-	  cpf int(11),
+	  cpf int(11),       ATENÇÃO: o melhor é usar o varchar, porque o int tem um número limite 
+que pode ser usado. (Veja a explicação no arquivo "Tipagem".
 	  telefone varchar(30),
 	  endereço varchar(100)
 	)
