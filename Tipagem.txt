@@ -15,7 +15,9 @@ cadastrar com barras, traços, etc
 
 Int e Float
 - São usados para valores númericos
-O maior números de algarismos do tipo int, é de 11 digitos
+O maior números de algarismos do tipo int, é de 11 digitos no máximo e ele tem uma quantidade de
+valor limitado(range).
+*Consutar a documentação, visto que, os valores estão sempre mudando
 
 Blob
 - É usados para objetos como fotos e documentos
@@ -27,9 +29,9 @@ Enum
 É um conjunto fixo de dados enumerados, e utilizamos para fixar valores em uma coluna.
 A organização dos dados, leva erro de contagem, por isso, é importante delimitar um conteúdo.
 Como por exemplo, em um sistema que armazena o sexo da pessoa, ela pode digitar de diversas maneiras,
-como com letra maiusculas, só a letra inicial, entre outros, assim haveria varios tipos de informação,
+como com letras maiusculas ou só a letra inicial, entre outros, assim haveria varios tipos de informação,
 causando diversos confitos. O enum acaba com esse problema, pois ele funciona como uma combobox,
 no qual, o usuário escolhe as opções disponiveis (conjunto delimitado de valores) e não tem a opção 
 de digitar, evitando conflito de dados.
 O enum está presente apenas no MySQL, em outros tipos de banco como o Oracle, SQLServer, é necessário
-criar uma constraint de check
+criar uma constraint de check.
