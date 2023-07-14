@@ -1,0 +1,28 @@
+Na tabela há linhas e colunas, e as linhas formam a junção das colunas(a linha fornece o registro 
+todo), isso recebe o nome de TUPLAS ou REGISTRO.
+O registro são os dados que inserimos.
+
+Como inserir dados em uma tabela?
+Há três formas de inserir os dados, especificando as colunas na tabela e sem especificar  
+O comando usado em qualquer tipo de banco de dados é o "INSERT INTO (NOME DA TABELA)"
+
+Veja como funciona usando o método em que se coloca as colunas:
+	INSERT INTO CLIENTE(NOME, SEXO, ENDEREÇO, TELEFONE,CPF) VALUES('JOÃO', 'M', 'SENADOR GARCIA',
+'1199999999', '98865357265')
+Quando é colocado as colunas é possível alterar a ordem, por exemplo, colocar o sexo antes do nome e
+assim por diante
+
+Método de omissão
+Quando se omiti as colunas é importante que os valores estejam na mesma ordem das colunas, pois se 
+colocar em ordem aleatória, os dados ficarão incorretos, ou seja, não pode pular os campos da coluna, 
+tem que colocar NULL, caso não haja valores para serem preenchidos, caso contrário, os valores irão
+truncados(na ordem errada) 
+	Exemplo:
+	INSERT INTO CLIENTE VALUES('JORGE', 'M', NULL, '1199999999', '98865357265')
+
+Metodo INSERT COMPACTO
+Usa-se para colocar vários registros juntos e só é usado no banco de dados MySQL
+	Exemplo:
+	INSERT INTO CLIENTE VALUES('JOÃO', 'M', 'SENADOR GARCIA',
+'1199999999', '98865357265'),
+				   ('ANA', 'F', 'GETULIO VARGAS', '1188888888', '12345678912') 
