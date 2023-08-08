@@ -27,10 +27,10 @@ Text
 
 Enum
 É um conjunto fixo de dados enumerados, e utilizamos para fixar valores em uma coluna.
-A organização dos dados, leva erro de contagem, por isso, é importante delimitar um conteúdo.
+A organização dos dados leva erro de contagem, por isso, é importante delimitar um conteúdo.
 Como por exemplo, em um sistema que armazena o sexo da pessoa, ela pode digitar de diversas maneiras,
 como com letras maiusculas ou só a letra inicial, entre outros, assim haveria varios tipos de informação,
-causando diversos confitos. O enum acaba com esse problema, pois ele funciona como uma combobox,
+causando diversos conflitos. O enum acaba com esse problema, pois ele funciona como uma combobox,
 no qual, o usuário escolhe as opções disponiveis (conjunto delimitado de valores) e não tem a opção 
 de digitar, evitando conflito de dados.
 O enum está presente apenas no MySQL, em outros tipos de banco como o Oracle, SQLServer, é necessário
