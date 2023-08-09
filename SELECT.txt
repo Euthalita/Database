@@ -1,0 +1,37 @@
+- Seleção, projeção e junção
+
+O comando SELECT faz parte da projeção e permite que você selecione partes dos seus dados, projete
+e construa.
+
+Exemplo:
+	SELECT NOW();
+Nesse exemplo, ele mostra a hora atual, então suponhamos que eu queira saber a hora que foi feita 
+uma query, não é necessário criar uma tabela para saber dos horáios das requisições, para isso, 
+usa-se uma alias de colunas que ao invés de criar uma outra tabela, ela puxa as informações em oculto
+e mostra na tabela
+
+Suponhamos haja diversas colunas e eu queira acessar somente algumas das colunas da tabela cliente 
+como por exemplo, nome, sexo, etc.
+	SELECT NOME, SEXO, EMAIL FROM CLIENTE;
+
+Suponhamos que eu queira alterar a ordem de exibição das colunas, por exemplo, se eu quiser exibir 
+primeiro o email e por ultimo o nome.
+	SELECT EMAIL, SEXO, ENDEREÇO, NOME FROM CLIENTE;
+
+Suponhamos que eu queira projetar um novo nome a uma coluna, por exemplo, a coluna chama-se "nome"
+e eu queira chama-la de "cliente", para isso, usa-se o comando:
+	SELECT NOME AS CLIENTE FROM CLIENTE
+AS CLIENTE = É a substituição do nome pelo cliente
+FROM CLIENTE = É a tabela 
+
+
+AVISO!!!
+O comando SELECT*FROM TABELA é usado somente para fins academicos, visto que, esse comando serve para 
+puxar todas as informações de uma tabela(full scann), e vamos supor, que você faça uma requisição
+(query) para uma página que pede apenas 3 campos, por exemplo, nome, cpf e sexo e você usa esse 
+comando para uma tabela que possui 8 campos, ela irá consumir muita banda de rede, além de que o 
+banco de dados ficara mais pesado para passar as informações.
+Para isso, é usado outro comando, vamos fazer a comparação com um livro. Suponha que um determinado
+livro possua 1000 páginas e você queira abrir na página 600, você irá no indice e abrirá o livro
+já na metade, ao invés de ficar folheando desde o começo. É a mesma coisa com o banco de dados,
+ao invés de percorrer todas as linhas e colunas, já vai direto no campo requerido.
